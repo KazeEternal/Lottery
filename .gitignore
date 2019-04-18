@@ -1,0 +1,8 @@
+Console/bin/
+Console/obj/
+Core/.vs/
+Core/Core/obj/
+Core/LotteryCore/bin/
+Core/LotteryCore/obj/
+GUI/GUI/bin/
+GUI/GUI/obj/

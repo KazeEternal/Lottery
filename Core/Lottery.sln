@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LotteryCore", "LotteryCore\LotteryCore.csproj", "{32C7610B-BD7F-4138-9F67-BFA33A41AA9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "..\Console\Console.csproj", "{03331A23-91C8-464A-90CA-63C75E86DF15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "..\GUI\GUI\GUI.csproj", "{470CC2CA-5E28-49EC-8BC8-49AC5B044BAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32C7610B-BD7F-4138-9F67-BFA33A41AA9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32C7610B-BD7F-4138-9F67-BFA33A41AA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32C7610B-BD7F-4138-9F67-BFA33A41AA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32C7610B-BD7F-4138-9F67-BFA33A41AA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03331A23-91C8-464A-90CA-63C75E86DF15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03331A23-91C8-464A-90CA-63C75E86DF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03331A23-91C8-464A-90CA-63C75E86DF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03331A23-91C8-464A-90CA-63C75E86DF15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470CC2CA-5E28-49EC-8BC8-49AC5B044BAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470CC2CA-5E28-49EC-8BC8-49AC5B044BAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470CC2CA-5E28-49EC-8BC8-49AC5B044BAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470CC2CA-5E28-49EC-8BC8-49AC5B044BAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AC3911E-BE29-46DD-BD12-15B60B9DB426}
+	EndGlobalSection
+EndGlobal
