@@ -36,6 +36,10 @@ namespace Core
                             string value = fields[PLAYER_NAME_FIELD_INDEX];
 
                             string[] whoIsthis = value.ToLower().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                            if(whoIsthis.Length < 2)
+                            {
+                                continue;
+                            }
 
                             Player toAdd = new Player();
                             toAdd.FirstName = whoIsthis[FIRST_NAME_INDEX].FirstCharToUpper();
