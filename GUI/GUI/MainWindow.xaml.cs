@@ -43,18 +43,23 @@ namespace GUI
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-            displayWinnerName.Foreground = new SolidColorBrush(Colors.Black);
+           
+            
             lock (mMutex)
             {
                 if (!mIsRunningEffect)
                 {
-                    mIsRunningEffect = true;
-                    mMediaPlayer.Position = TimeSpan.Zero;
-                    mMediaPlayer.Play();
-                    //displayWinnerName.Text = "Hello World";
-                    Thread t = new Thread(RunEffect);
-                    t.Start();
+                    if (Key.Space == e.Key)
+                    {
+                        displayWinnerName.Foreground = new SolidColorBrush(Colors.Black);
+                        mIsRunningEffect = true;
+                        mMediaPlayer.Position = TimeSpan.Zero;
+                        mMediaPlayer.Play();
+                        //displayWinnerName.Text = "Hello World";
+                        Thread t = new Thread(RunEffect);
+                        t.Start();
 
+                    }
                 }
             }
         }
