@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
+        xmlns:properties="clr-namespace:GUI.Properties"
         mc:Ignorable="d"
         Icon="./Logo.jpg"
         KeyDown="Window_KeyDown"
@@ -20,7 +21,8 @@
                    HorizontalAlignment="Stretch" 
                    Grid.Row="0" 
                    Grid.Column="0">
-            <TextBlock Name="displayWinnerName" Text="The Perkins Raffle" ></TextBlock>
+            <TextBlock Name="displayWinnerName" Text="{Binding Source={x:Static properties:Settings.Default},
+                               Path=Title}" ></TextBlock>
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="0">
             <Image Source="maxresdefault.jpg"/>
