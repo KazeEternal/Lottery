@@ -53,13 +53,19 @@ namespace GUI
                     {
                         displayWinnerName.Foreground = new SolidColorBrush(Colors.Black);
                         mIsRunningEffect = true;
-                        mMediaPlayer.Position = TimeSpan.Zero;
-                        mMediaPlayer.Play();
+
                         //displayWinnerName.Text = "Hello World";
                         Thread t = new Thread(RunEffect);
                         t.Start();
 
+                        mMediaPlayer.Position = TimeSpan.Zero;
+                        mMediaPlayer.Play();
                     }
+                    else if (Key.Z == e.Key && (e.KeyboardDevice.Modifiers & ModifierKeys.Control) != 0)
+                    {
+                        SerializationHandler.RestoreRecords(LotteryRecordFile);
+                    }
+
                 }
             }
         }

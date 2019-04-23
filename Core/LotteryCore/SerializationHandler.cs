@@ -96,11 +96,28 @@ namespace Core
             return retVal;
         }
 
+        public static void RestoreRecords(string recordsPath)
+        {
+            FileInfo fInfo = new FileInfo(recordsPath + ".bak");
+
+            if (fInfo.Exists)
+            {
+                new FileInfo(recordsPath).Delete();
+                fInfo.CopyTo(recordsPath);
+            }
+        }
+
         public static void SaveRecords(Records records, string recordsPath)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(Records));
 
             FileInfo fInfo = new FileInfo(recordsPath);
+
+            if(fInfo.Exists)
+            {
+                fInfo.CopyTo(fInfo.FullName + ".bak");
+            }
+
             using (FileStream writer = fInfo.OpenWrite())
             {
                 serializer.Serialize(writer, records);
