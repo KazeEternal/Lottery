@@ -2,19 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace GUI
 {
@@ -39,6 +32,26 @@ namespace GUI
             mRecords.ValidatePlayers(ref mPlayers);
             FileInfo fInfoAudio = new FileInfo("MarioKartBox.m4a");
             mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
+
+            MarketImage();
+        }
+
+        private void MarketImage()
+        {
+            FileInfo fInfo = new FileInfo(Properties.Settings.Default.DisplayImage);
+            if (fInfo.Exists)
+            {
+                
+                Image i = new Image();
+                BitmapImage src = new BitmapImage();
+                src.BeginInit();
+                src.UriSource = new Uri("file:///" + fInfo.FullName);
+                src.EndInit();
+                i.Source = src;
+                i.Stretch = Stretch.Uniform;
+
+                marketImage.Source = src;
+            }
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
@@ -64,6 +77,7 @@ namespace GUI
                     else if (Key.Z == e.Key && (e.KeyboardDevice.Modifiers & ModifierKeys.Control) != 0)
                     {
                         SerializationHandler.RestoreRecords(LotteryRecordFile);
+                        mRecords = SerializationHandler.LoadRecords(LotteryRecordFile);
                     }
 
                 }

@@ -31,5 +31,14 @@ namespace GUI.Properties {
                 return ((string)(this["Title"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("LibraryNewGames.jpg")]
+        public string DisplayImage {
+            get {
+                return ((string)(this["DisplayImage"]));
+            }
+        }
     }
 }

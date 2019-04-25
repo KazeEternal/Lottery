@@ -115,7 +115,7 @@ namespace Core
 
             if(fInfo.Exists)
             {
-                fInfo.CopyTo(fInfo.FullName + ".bak");
+                fInfo.CopyTo(fInfo.FullName + ".bak", true);
             }
 
             using (FileStream writer = fInfo.OpenWrite())
