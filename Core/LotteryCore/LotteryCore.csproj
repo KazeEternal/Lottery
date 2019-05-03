@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Item.cs" />
+    <Compile Include="Question.cs" />
     <Compile Include="SerializationHandler.cs" />
     <Compile Include="Lottery.cs" />
     <Compile Include="Player.cs" />

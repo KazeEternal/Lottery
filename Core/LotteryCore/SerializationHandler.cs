@@ -14,7 +14,7 @@ namespace Core
         private static readonly int FIRST_NAME_INDEX = 0;
         private static readonly int LAST_NAME_INDEX = 1;
 
-        public static List<Player> LoadPlayers(string playersFilePath)
+        public static List<Player> LoadPlayers(string playersFilePath, int[] answersIndex = null)
         {
 
             FileInfo fInfo = new FileInfo(playersFilePath);
@@ -46,6 +46,16 @@ namespace Core
                             toAdd.LastName = whoIsthis[LAST_NAME_INDEX].FirstCharToUpper();
 
                             toAdd.LastWin = DateTime.Today.AddDays(-14);
+
+                            if(answersIndex != null)
+                            {
+                                
+                                foreach(int index in answersIndex)
+                                {
+                                    Question q = new Question() { Value = fields[index], Index = index };
+                                    toAdd.Answers.Add(q);
+                                }
+                            }
 
                             playerRetVal.Add(toAdd);
                         }

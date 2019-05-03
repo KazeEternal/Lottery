@@ -6,3 +6,9 @@ Core/LotteryCore/bin/
 Core/LotteryCore/obj/
 GUI/GUI/bin/
 GUI/GUI/obj/
+Core/packages/MonoGame.Content.Builder.3.7.0.9/
+Core/packages/
+GLVersionGUI/GLVersionGUI/bin/
+GLVersionGUI/GLVersionGUI/obj/
+MonoGame/MonoGame/bin/
+MonoGame/MonoGame/obj/

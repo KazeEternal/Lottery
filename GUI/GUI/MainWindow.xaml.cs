@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Linq;
+using GUI.States;
 
 namespace GUI
 {
@@ -19,21 +21,46 @@ namespace GUI
         public static string PlayersFile { get; set; } = "Players.csv"; // @"D:\Development\Lottery\JunkFiles\Players.csv";
         public static string LotteryRecordFile { get; set; } = "LotteryRecord.xml"; //@"D:\Development\Lottery\JunkFiles\LotteryRecord.xml";
 
-        private List<Player> mPlayers = SerializationHandler.LoadPlayers(PlayersFile);
+        private List<Player> mPlayers = null;
         private Records mRecords = SerializationHandler.LoadRecords(LotteryRecordFile);
 
         private bool mIsRunningEffect = false;
         private Mutex mMutex = new Mutex();
 
-        System.Windows.Media.MediaPlayer mMediaPlayer = new System.Windows.Media.MediaPlayer();
+        private RaffleStateInterface mRaffleStateHandler = null;
+
         public MainWindow()
         {
             InitializeComponent();
-            mRecords.ValidatePlayers(ref mPlayers);
-            FileInfo fInfoAudio = new FileInfo("MarioKartBox.m4a");
-            mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
 
-            MarketImage();
+            ConfigureRaffleHandler();
+            
+
+            #region Configure Question's Answers loader
+            int[] indexes = new List<string>(Properties.Settings.Default.AnswersIndex.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)).Select(s => int.Parse(s)).ToArray();
+            #endregion
+
+            #region configure players and records
+            mPlayers = SerializationHandler.LoadPlayers(PlayersFile, indexes);
+            mRecords.ValidatePlayers(ref mPlayers);
+            #endregion
+            
+            //MarketImage();
+        }
+
+        private void ConfigureRaffleHandler()
+        {
+            switch (Properties.Settings.Default.Theme)
+            {
+                case "Default":
+                    mRaffleStateHandler = new DefaultRaffleState();
+                    break;
+                case "StarWars":
+                    mRaffleStateHandler = new SortingHatAndAnswerState();        
+                    break;
+            }
+
+            mRaffleStateHandler.DisplayAreaInitialize(displayArea, displayWinnerName);
         }
 
         private void MarketImage()
@@ -50,75 +77,48 @@ namespace GUI
                 i.Source = src;
                 i.Stretch = Stretch.Uniform;
 
-                marketImage.Source = src;
+                //marketImage.Source = src;
             }
         }
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
-           
-            
+            bool isRunningFireworks = false;
+
             lock (mMutex)
             {
-                if (!mIsRunningEffect)
+                isRunningFireworks = !mIsRunningEffect;
+            }
+
+            if (isRunningFireworks)
+            {
+                if (Key.Space == e.Key)
                 {
-                    if (Key.Space == e.Key)
-                    {
-                        displayWinnerName.Foreground = new SolidColorBrush(Colors.Black);
-                        mIsRunningEffect = true;
+                    displayWinnerName.Foreground = new SolidColorBrush(Colors.Black);
+                    mIsRunningEffect = true;
 
-                        //displayWinnerName.Text = "Hello World";
-                        Thread t = new Thread(RunEffect);
-                        t.Start();
-
-                        mMediaPlayer.Position = TimeSpan.Zero;
-                        mMediaPlayer.Play();
-                    }
-                    else if (Key.Z == e.Key && (e.KeyboardDevice.Modifiers & ModifierKeys.Control) != 0)
-                    {
-                        SerializationHandler.RestoreRecords(LotteryRecordFile);
-                        mRecords = SerializationHandler.LoadRecords(LotteryRecordFile);
-                    }
-
+                    //displayWinnerName.Text = "Hello World";
+                    Thread t = new Thread(DoRaffleRunningState);
+                    t.Start();
                 }
+                else if (Key.Z == e.Key && (e.KeyboardDevice.Modifiers & ModifierKeys.Control) != 0)
+                {
+                    SerializationHandler.RestoreRecords(LotteryRecordFile);
+                    mRecords = SerializationHandler.LoadRecords(LotteryRecordFile);
+                }
+
             }
         }
 
-        private void RunEffect()
+        private void DoRaffleRunningState()
         {
             //Quick and dirty, a more accurate version can be written
-            const int TIME_INCREMENT = 10;
-            int index = 0;
-            
-
-            for (int time = 0; time < 3500; time += TIME_INCREMENT)
-            {
-                
-                displayWinnerName.Dispatcher.BeginInvoke(
-                    (Action)(() =>
-                    {
-                        if (index >= mPlayers.Count)
-                        {
-                            index = 0;
-                        }
-                        displayWinnerName.Text = mPlayers[index].FirstName + " " + mPlayers[index].LastName;
-                        index++;
-                    })
-                );
-                Thread.Sleep(TIME_INCREMENT);
-                
-            }
+            mRaffleStateHandler.Fireworks(mPlayers);
 
             Player winner = Lottery.GetWinner(mRecords, mPlayers);
             SerializationHandler.SaveRecords(mRecords, LotteryRecordFile);
 
-            displayWinnerName.Dispatcher.BeginInvoke(
-                    (Action)(() =>
-                    {
-                        displayWinnerName.Foreground = new SolidColorBrush(Colors.Red);
-                        displayWinnerName.Text = winner.FirstName + " " + winner.LastName;
-                    })
-                );
+            mRaffleStateHandler.DisplayWinner(winner);
 
             lock (mMutex)
             {

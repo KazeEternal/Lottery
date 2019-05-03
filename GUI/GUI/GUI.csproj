@@ -55,6 +55,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DefaultDisplayArea.xaml.cs">
+      <DependentUpon>DefaultDisplayArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="States\DefaultRaffleState.cs" />
+    <Compile Include="States\RaffleStateInterface.cs" />
+    <Compile Include="States\SortingHatAndAnswerState.cs" />
+    <Page Include="DefaultDisplayArea.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -8,5 +8,11 @@
     <Setting Name="DisplayImage" Type="System.String" Scope="Application">
       <Value Profile="(Default)">LibraryNewGames.jpg</Value>
     </Setting>
+    <Setting Name="AnswersIndex" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="Theme" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

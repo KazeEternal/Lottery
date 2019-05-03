@@ -40,5 +40,23 @@ namespace GUI.Properties {
                 return ((string)(this["DisplayImage"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string AnswersIndex {
+            get {
+                return ((string)(this["AnswersIndex"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        public string Theme {
+            get {
+                return ((string)(this["Theme"]));
+            }
+        }
     }
 }

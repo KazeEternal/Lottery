@@ -10,5 +10,6 @@ namespace Core
         public String FirstName { get; set; }
         public String LastName { get; set; }
         public List<Item> WonItems { get; set; } = new List<Item>();
+        public List<Question> Answers { get; private set; } = new List<Question>();
     }
 }
