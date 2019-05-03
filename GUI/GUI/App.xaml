@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:GUI"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <FontFamily x:Key="Starjedi">pack://application:,,,/Fonts/#Star Jedi</FontFamily>
     </Application.Resources>
 </Application>

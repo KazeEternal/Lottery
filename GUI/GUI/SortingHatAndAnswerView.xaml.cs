@@ -18,9 +18,9 @@ namespace GUI
     /// <summary>
     /// Interaction logic for DefaultDisplayArea.xaml
     /// </summary>
-    public partial class DefaultDisplayArea : UserControl
+    public partial class SortingHatAndAnswerView : UserControl
     {
-        public DefaultDisplayArea()
+        public SortingHatAndAnswerView()
         {
             InitializeComponent();
         }

@@ -52,7 +52,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Default")]
+        [global::System.Configuration.DefaultSettingValueAttribute("StarWars")]
         public string Theme {
             get {
                 return ((string)(this["Theme"]));

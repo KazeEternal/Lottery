@@ -21,8 +21,10 @@
                    HorizontalAlignment="Stretch" 
                    Grid.Row="0" 
                    Grid.Column="0">
-            <TextBlock Name="displayWinnerName" Text="{Binding Source={x:Static properties:Settings.Default},
-                               Path=Title}" ></TextBlock>
+            <TextBlock Name="displayWinnerName" 
+                       Text="{Binding Source={x:Static properties:Settings.Default},
+                               Path=Title}" 
+                       FontFamily="{StaticResource Starjedi}"/>
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="0">
             <StackPanel x:Name="displayArea">

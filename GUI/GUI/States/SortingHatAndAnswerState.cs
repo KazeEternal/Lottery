@@ -17,9 +17,13 @@ namespace GUI.States
     {
         private MediaPlayer mMediaPlayer = new MediaPlayer();
         private TextBlock mDisplayWinnerName = null;
+        private SortingHatAndAnswerView mDisplayArea = null;
         public void DisplayAreaInitialize(StackPanel displayArea, TextBlock nameDisplay)
         {
             mDisplayWinnerName = nameDisplay;
+
+            mDisplayArea = new SortingHatAndAnswerView();
+            displayArea.Children.Add(mDisplayArea);
 
             FileInfo fInfoAudio = new FileInfo("MarioKartBox.m4a");
             mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
@@ -32,6 +36,8 @@ namespace GUI.States
                     {
                         mDisplayWinnerName.Foreground = new SolidColorBrush(Colors.Red);
                         mDisplayWinnerName.Text = winner.FirstName + " " + winner.LastName;
+
+                        mDisplayArea.Answer.Text = winner.Answers[0].Value;
                     })
                 );
         }

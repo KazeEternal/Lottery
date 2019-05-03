@@ -55,13 +55,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DefaultDisplayArea.xaml.cs">
-      <DependentUpon>DefaultDisplayArea.xaml</DependentUpon>
+    <Compile Include="SortingHatAndAnswerView.xaml.cs">
+      <DependentUpon>SortingHatAndAnswerView.xaml</DependentUpon>
     </Compile>
     <Compile Include="States\DefaultRaffleState.cs" />
     <Compile Include="States\RaffleStateInterface.cs" />
     <Compile Include="States\SortingHatAndAnswerState.cs" />
-    <Page Include="DefaultDisplayArea.xaml">
+    <Page Include="SortingHatAndAnswerView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -96,6 +96,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Starjedi.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -119,6 +122,7 @@
     <Resource Include="Logo.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="JediOrder.jpg" />
     <Content Include="MarioKartBox.m4a">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

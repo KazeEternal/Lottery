@@ -12,7 +12,7 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="Theme" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Default</Value>
+      <Value Profile="(Default)">StarWars</Value>
     </Setting>
   </Settings>
 </SettingsFile>

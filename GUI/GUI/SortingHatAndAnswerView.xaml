@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="GUI.DefaultDisplayArea"
+﻿<UserControl x:Class="GUI.SortingHatAndAnswerView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,6 +7,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Image x:Name="marketImage"  Source="maxresdefault.jpg"/>
+
+        <Image Source="JediOrder.jpg"  />
+        <Viewbox>
+        <TextBlock Name="Answer" Text="" 
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch" TextWrapping="Wrap"
+                   MaxWidth="200"
+                   FontFamily="{StaticResource Starjedi}"/>
+        </Viewbox>
     </Grid>
 </UserControl>
