@@ -16,6 +16,9 @@ namespace GUI.States
     public class SortingHatAndAnswerState : RaffleStateInterface
     {
         private MediaPlayer mMediaPlayer = new MediaPlayer();
+        private MediaPlayer[] mRandomPreSelectLine = null;
+        private MediaPlayer[] mRandomOnSelectLine = null;
+
         private TextBlock mDisplayWinnerName = null;
         private SortingHatAndAnswerView mDisplayArea = null;
         public void DisplayAreaInitialize(StackPanel displayArea, TextBlock nameDisplay)
@@ -27,6 +30,39 @@ namespace GUI.States
 
             FileInfo fInfoAudio = new FileInfo("MarioKartBox.m4a");
             mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
+
+            //temp need file loaders for audio
+            string[] loaders = new string[]
+            {
+                @"Audio/rightok.wav",
+                @"Audio/difficult.wav",
+                @"Audio/ahright.wav",
+                //@"Audio/wheretoputyou.wav",
+                //@"Audio/itsallhere.wav"
+            };
+
+            string[] selected = new string[]
+            {
+                @"Audio/gryffindor.wav",
+                @"Audio/hufflepuff.wav",
+                @"Audio/ravenclaw.wav",
+                @"Audio/slytherin.wav"
+            };
+
+            mRandomPreSelectLine = LoadAudioFiles(loaders);
+            mRandomOnSelectLine = LoadAudioFiles(selected);
+        }
+
+        private MediaPlayer[] LoadAudioFiles(string[] items)
+        {
+            var retVal = new MediaPlayer[items.Length];
+            for (int iter = 0; iter < items.Length; iter++)
+            {
+                FileInfo fInfoAudio = new FileInfo(items[iter]);
+                retVal[iter] = new MediaPlayer();
+                retVal[iter].Open(new System.Uri("file:///" + fInfoAudio.FullName));
+            }
+            return retVal;
         }
 
         public void DisplayWinner(Player winner)
@@ -38,6 +74,10 @@ namespace GUI.States
                         mDisplayWinnerName.Text = winner.FirstName + " " + winner.LastName;
 
                         mDisplayArea.Answer.Text = winner.Answers[0].Value;
+
+                        int item = Lottery.GenerateValue(0, mRandomOnSelectLine.Length - 1);
+                        mRandomOnSelectLine[item].Position = TimeSpan.Zero;
+                        mRandomOnSelectLine[item].Play();
                     })
                 );
         }
@@ -47,10 +87,17 @@ namespace GUI.States
             const int TIME_INCREMENT = 10;
             int index = 0;
 
+
+            int item = Lottery.GenerateValue(0, mRandomPreSelectLine.Length - 1);
+
             Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Normal, new Action(() =>
             {
                 mMediaPlayer.Position = TimeSpan.Zero;
                 mMediaPlayer.Play();
+
+                
+                mRandomPreSelectLine[item].Position = TimeSpan.Zero;
+                mRandomPreSelectLine[item].Play();
             }));
 
             for (int time = 0; time < 3500; time += TIME_INCREMENT)
