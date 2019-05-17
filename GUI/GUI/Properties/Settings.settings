@@ -14,5 +14,11 @@
     <Setting Name="Theme" Type="System.String" Scope="Application">
       <Value Profile="(Default)">StarWars</Value>
     </Setting>
+    <Setting Name="PreSelectAudioList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="PostSelectAudioList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

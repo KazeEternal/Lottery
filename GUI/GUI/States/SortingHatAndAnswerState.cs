@@ -31,23 +31,8 @@ namespace GUI.States
             FileInfo fInfoAudio = new FileInfo("MarioKartBox.m4a");
             mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
 
-            //temp need file loaders for audio
-            string[] loaders = new string[]
-            {
-                @"Audio/rightok.wav",
-                @"Audio/difficult.wav",
-                @"Audio/ahright.wav",
-                //@"Audio/wheretoputyou.wav",
-                //@"Audio/itsallhere.wav"
-            };
-
-            string[] selected = new string[]
-            {
-                @"Audio/gryffindor.wav",
-                @"Audio/hufflepuff.wav",
-                @"Audio/ravenclaw.wav",
-                @"Audio/slytherin.wav"
-            };
+            string[] loaders = Properties.Settings.Default.PreSelectAudioList.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] selected = Properties.Settings.Default.PostSelectAudioList.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
             mRandomPreSelectLine = LoadAudioFiles(loaders);
             mRandomOnSelectLine = LoadAudioFiles(selected);
@@ -75,9 +60,12 @@ namespace GUI.States
 
                         mDisplayArea.Answer.Text = winner.Answers[0].Value;
 
-                        int item = Lottery.GenerateValue(0, mRandomOnSelectLine.Length - 1);
-                        mRandomOnSelectLine[item].Position = TimeSpan.Zero;
-                        mRandomOnSelectLine[item].Play();
+                        if (mRandomOnSelectLine.Length > 0)
+                        {
+                            int item = Lottery.GenerateValue(0, mRandomOnSelectLine.Length - 1);
+                            mRandomOnSelectLine[item].Position = TimeSpan.Zero;
+                            mRandomOnSelectLine[item].Play();
+                        }
                     })
                 );
         }
@@ -95,9 +83,11 @@ namespace GUI.States
                 mMediaPlayer.Position = TimeSpan.Zero;
                 mMediaPlayer.Play();
 
-                
-                mRandomPreSelectLine[item].Position = TimeSpan.Zero;
-                mRandomPreSelectLine[item].Play();
+                if (mRandomPreSelectLine.Length > 0)
+                {
+                    mRandomPreSelectLine[item].Position = TimeSpan.Zero;
+                    mRandomPreSelectLine[item].Play();
+                }
             }));
 
             for (int time = 0; time < 3500; time += TIME_INCREMENT)

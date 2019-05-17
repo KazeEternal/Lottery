@@ -8,13 +8,14 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
 
-        <Image Source="hat.png"  />
+        <Image Source="Ubisoft.png"  />
         <Viewbox>
-        <TextBlock Name="Answer" Text="" 
+            <TextBlock Name="Answer" Text="" 
             HorizontalAlignment="Stretch" 
             VerticalAlignment="Stretch" TextWrapping="Wrap"
                    MaxWidth="200"
-                   FontFamily="{StaticResource Harrp}"/>
+                   FontFamily="{StaticResource eurostile_extended_black}"/>
+            <!--FontFamily="{StaticResource Harrp}"/-->
         </Viewbox>
     </Grid>
 </UserControl>

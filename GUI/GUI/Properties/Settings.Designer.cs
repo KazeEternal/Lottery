@@ -58,5 +58,23 @@ namespace GUI.Properties {
                 return ((string)(this["Theme"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PreSelectAudioList {
+            get {
+                return ((string)(this["PreSelectAudioList"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PostSelectAudioList {
+            get {
+                return ((string)(this["PostSelectAudioList"]));
+            }
+        }
     }
 }

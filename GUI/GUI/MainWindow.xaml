@@ -24,7 +24,8 @@
             <TextBlock Name="displayWinnerName" 
                        Text="{Binding Source={x:Static properties:Settings.Default},
                                Path=Title}" 
-                       FontFamily="{StaticResource Harrp}"/>
+                       FontFamily="{StaticResource eurostile_extended_black}"/>
+            <!--FontFamily="{StaticResource Harrp}"/-->
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="0">
             <StackPanel x:Name="displayArea">

@@ -102,13 +102,18 @@
     <Resource Include="Fonts\HARRP.TTF">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Fonts\eurostile_extended_black.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Core\LotteryCore\LotteryCore.csproj">
@@ -125,6 +130,7 @@
     <Resource Include="Logo.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Ubisoft.png" />
     <Resource Include="JediOrder.jpg" />
     <Content Include="Audio\ahright.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

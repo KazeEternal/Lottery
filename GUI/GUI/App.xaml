@@ -6,5 +6,6 @@
     <Application.Resources>
         <FontFamily x:Key="Starjedi">pack://application:,,,/Fonts/#Star Jedi</FontFamily>
         <FontFamily x:Key="Harrp">pack://application:,,,/Fonts/#Harry Potter</FontFamily>
+        <FontFamily x:Key="eurostile_extended_black">pack://application:,,,/Fonts/#Ubisoft Font</FontFamily>
     </Application.Resources>
 </Application>
