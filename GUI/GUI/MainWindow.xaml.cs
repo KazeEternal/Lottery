@@ -61,6 +61,23 @@ namespace GUI
             }
 
             mRaffleStateHandler.DisplayAreaInitialize(displayArea, displayWinnerName);
+            mRaffleStateHandler.StateChangeEvent += MRaffleStateHandler_StateChangeEvent;
+        }
+
+        private void MRaffleStateHandler_StateChangeEvent(RaffleStateInterface.States state)
+        {
+            if(state == RaffleStateInterface.States.FireworksDone)
+            {
+                Player winner = Lottery.GetWinner(mRecords, mPlayers);
+            SerializationHandler.SaveRecords(mRecords, LotteryRecordFile);
+
+            mRaffleStateHandler.DisplayWinner(winner);
+
+            lock (mMutex)
+            {
+                mIsRunningEffect = false;
+            }
+            }
         }
 
         private void MarketImage()
@@ -106,6 +123,10 @@ namespace GUI
                     SerializationHandler.RestoreRecords(LotteryRecordFile);
                     mRecords = SerializationHandler.LoadRecords(LotteryRecordFile);
                 }
+                else if(Key.S == e.Key)
+                {
+                    mRaffleStateHandler.ShowAnswer();
+                }
 
             }
         }
@@ -115,15 +136,7 @@ namespace GUI
             //Quick and dirty, a more accurate version can be written
             mRaffleStateHandler.Fireworks(mPlayers);
 
-            Player winner = Lottery.GetWinner(mRecords, mPlayers);
-            SerializationHandler.SaveRecords(mRecords, LotteryRecordFile);
-
-            mRaffleStateHandler.DisplayWinner(winner);
-
-            lock (mMutex)
-            {
-                mIsRunningEffect = false;
-            }
+            
         }
     }
 }

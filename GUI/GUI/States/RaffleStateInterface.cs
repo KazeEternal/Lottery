@@ -8,10 +8,32 @@ using System.Windows.Controls;
 
 namespace GUI.States
 {
-    public interface RaffleStateInterface
+    public abstract class RaffleStateInterface
     {
-        void DisplayAreaInitialize(StackPanel displayArea, TextBlock nameDisplay);
-        void Fireworks(List<Player> mPlayers);
-        void DisplayWinner(Player winner);
+        public enum States
+        {
+            Running,
+            FireworksDone,
+            DisplayingWinner
+        }
+
+        public delegate void RaffleStateChange(States state);
+
+        public abstract void DisplayAreaInitialize(StackPanel displayArea, TextBlock nameDisplay);
+        public abstract void Fireworks(List<Player> mPlayers);
+        public abstract void DisplayWinner(Player winner);
+
+        protected virtual void OnShapeChanged(States state)
+        {
+            
+            if (StateChangeEvent != null)
+            {
+                StateChangeEvent(state);
+            }
+        }
+
+        public event RaffleStateChange StateChangeEvent;
+
+        public virtual void ShowAnswer() { }
     }
 }

@@ -19,7 +19,7 @@ namespace GUI.States
     {
         private MediaPlayer mMediaPlayer = new MediaPlayer();
         private TextBlock mDisplayWinnerName = null;
-        public void DisplayAreaInitialize(StackPanel displayArea, TextBlock nameDisplay)
+        public override void DisplayAreaInitialize(StackPanel displayArea, TextBlock nameDisplay)
         {
             mDisplayWinnerName = nameDisplay;
 
@@ -35,7 +35,7 @@ namespace GUI.States
             mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
         }
 
-        public void DisplayWinner(Player winner)
+        public override void DisplayWinner(Player winner)
         {
             mDisplayWinnerName.Dispatcher.BeginInvoke(
                     (Action)(() =>
@@ -46,7 +46,7 @@ namespace GUI.States
                 );
         }
 
-        public void Fireworks(List<Player> players)
+        public override void Fireworks(List<Player> players)
         {
             const int TIME_INCREMENT = 10;
             int index = 0;
