@@ -38,7 +38,10 @@ namespace Core
                             string value = fields[PLAYER_NAME_FIELD_INDEX];
 
                             string[] whoIsThis = value.ToLower().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            if((whoIsThis.Length < 2 && whoIsThis.Any(o => o.Length < 1) )  || (forfeitIndex > -1  && fields[forfeitIndex].ToLower() == "yes"))
+                            
+                            if (whoIsThis.Length < 2  || 
+                                whoIsThis.Any(s => s.Length < 2) || 
+                                (forfeitIndex > -1  && fields[forfeitIndex].ToLower() == "yes"))
                             {
                                 continue;
                             }
