@@ -13,8 +13,10 @@ namespace Core
         private static readonly int PLAYER_NAME_FIELD_INDEX = 0;
         private static readonly int FIRST_NAME_INDEX = 0;
         private static readonly int LAST_NAME_INDEX = 1;
+        private static readonly int LAST_FULLNAME_INDEX = 2;
+        private static readonly int MIDDLE_NAME_INDEX = 1;
 
-        public static List<Player> LoadPlayers(string playersFilePath, int[] answersIndex = null)
+        public static List<Player> LoadPlayers(string playersFilePath, int forfeitIndex = -1, int[] answersIndex = null)
         {
 
             FileInfo fInfo = new FileInfo(playersFilePath);
@@ -35,15 +37,23 @@ namespace Core
                         {
                             string value = fields[PLAYER_NAME_FIELD_INDEX];
 
-                            string[] whoIsthis = value.ToLower().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-                            if(whoIsthis.Length < 2)
+                            string[] whoIsThis = value.ToLower().Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                            if((whoIsThis.Length < 2 && whoIsThis.Any(o => o.Length < 1) )  || (forfeitIndex > -1  && fields[forfeitIndex].ToLower() == "yes"))
                             {
                                 continue;
                             }
 
                             Player toAdd = new Player();
-                            toAdd.FirstName = whoIsthis[FIRST_NAME_INDEX].FirstCharToUpper();
-                            toAdd.LastName = whoIsthis[LAST_NAME_INDEX].FirstCharToUpper();
+                            toAdd.FirstName = whoIsThis[FIRST_NAME_INDEX].FirstCharToUpper();
+                            if (whoIsThis.Length > 2)
+                            {
+                                toAdd.MiddleName = whoIsThis[MIDDLE_NAME_INDEX].FirstCharToUpper();
+                                toAdd.LastName = whoIsThis[LAST_FULLNAME_INDEX].FirstCharToUpper();
+                            }
+                            else
+                            {
+                                toAdd.LastName = whoIsThis[LAST_NAME_INDEX].FirstCharToUpper();
+                            }
 
                             toAdd.LastWin = DateTime.Today.AddDays(-14);
 

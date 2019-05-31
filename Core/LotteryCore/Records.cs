@@ -12,6 +12,8 @@ namespace Core
     {
         [XmlElement("First")]
         public string FirstName { get; set; } = null;
+        [XmlElement("Middle")]
+        public string MiddleName { get; set; } = string.Empty;
         [XmlElement("Last")]
         public string LastName { get; set; } = null;
         [XmlElement(ElementName = "Prize", Type = typeof(Item))]
@@ -26,7 +28,7 @@ namespace Core
         public List<Record> PlayerRecords { get; set; } = new List<Record>();
         public void ValidatePlayer(Player toValidate)
         {
-            Record found = PlayerRecords.Find(o => o.FirstName == toValidate.FirstName && o.LastName == toValidate.LastName);
+            Record found = PlayerRecords.Find(o => o.FirstName == toValidate.FirstName && o.MiddleName == toValidate.MiddleName && o.LastName == toValidate.LastName);
             if(found != null)
             {
                 toValidate.LastWin = found.DateWon;
@@ -35,7 +37,7 @@ namespace Core
 
         public void ApplyWinner(Player winner)
         {
-            Record found = PlayerRecords.Find(o => o.FirstName == winner.FirstName && o.LastName == winner.LastName);
+            Record found = PlayerRecords.Find(o => o.FirstName == winner.FirstName && o.MiddleName == winner.MiddleName && o.LastName == winner.LastName);
             if(found != null)
             {
                 found.DateWon = DateTime.Today;
@@ -47,6 +49,7 @@ namespace Core
                     new Record()
                     {
                         FirstName = winner.FirstName,
+                        MiddleName = winner.MiddleName,
                         LastName = winner.LastName,
                         DateWon = DateTime.Today,
                         Prizes = new List<Item>(new Item[] { new Item() { Date = DateTime.Today.ToString(), Code = "N/A", Name = "N/A" } })

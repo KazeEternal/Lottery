@@ -38,10 +38,11 @@ namespace GUI
 
             #region Configure Question's Answers loader
             int[] indexes = new List<string>(Properties.Settings.Default.AnswersIndex.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)).Select(s => int.Parse(s)).ToArray();
+            int forfeitIndex = Properties.Settings.Default.ForfeitIndex;
             #endregion
 
             #region configure players and records
-            mPlayers = SerializationHandler.LoadPlayers(PlayersFile, indexes);
+            mPlayers = SerializationHandler.LoadPlayers(PlayersFile, forfeitIndex, indexes);
             mRecords.ValidatePlayers(ref mPlayers);
             #endregion
             

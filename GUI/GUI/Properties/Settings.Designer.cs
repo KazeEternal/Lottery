@@ -76,5 +76,14 @@ namespace GUI.Properties {
                 return ((string)(this["PostSelectAudioList"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int ForfeitIndex {
+            get {
+                return ((int)(this["ForfeitIndex"]));
+            }
+        }
     }
 }

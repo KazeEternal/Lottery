@@ -69,7 +69,7 @@ namespace GUI.States
                     (Action)(() =>
                     {
                         mDisplayWinnerName.Foreground = new SolidColorBrush(Colors.Red);
-                        mDisplayWinnerName.Text = winner.FirstName + " " + winner.LastName;
+                        mDisplayWinnerName.Text = winner.FullName;
 
                         mDisplayArea.Answer.Text = winner.Answers[0].Value;
 
@@ -115,7 +115,7 @@ namespace GUI.States
                         {
                             index = 0;
                         }
-                        mDisplayWinnerName.Text = players[index].FirstName + " " + players[index].LastName;
+                        mDisplayWinnerName.Text = players[index].FullName;
                         index++;
                     })
                 );
@@ -136,6 +136,8 @@ namespace GUI.States
 
         public override void ShowAnswer()
         {
+            if (String.IsNullOrWhiteSpace(mDisplayArea.Answer.Text))
+                mDisplayArea.Answer.Text = "ACCESS DENIED";
             mDisplayArea.Answer.Visibility = Visibility.Visible;
         }
     }

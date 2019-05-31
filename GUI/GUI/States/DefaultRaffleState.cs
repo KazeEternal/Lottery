@@ -41,7 +41,7 @@ namespace GUI.States
                     (Action)(() =>
                     {
                         mDisplayWinnerName.Foreground = new SolidColorBrush(Colors.Red);
-                        mDisplayWinnerName.Text = winner.FirstName + " " + winner.LastName;
+                        mDisplayWinnerName.Text = winner.FullName;
                     })
                 );
         }
@@ -67,7 +67,7 @@ namespace GUI.States
                         {
                             index = 0;
                         }
-                        mDisplayWinnerName.Text = players[index].FirstName + " " + players[index].LastName;
+                        mDisplayWinnerName.Text = players[index].FullName;
                         index++;
                     })
                 );
