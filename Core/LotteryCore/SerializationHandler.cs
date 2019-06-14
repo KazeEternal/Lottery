@@ -41,7 +41,7 @@ namespace Core
                             
                             if (whoIsThis.Length < 2  || 
                                 whoIsThis.Any(s => s.Length < 2) || 
-                                (forfeitIndex > -1  && fields[forfeitIndex].ToLower() == "yes"))
+                                (forfeitIndex > -1 && fields.Length > forfeitIndex && fields[forfeitIndex].ToLower() == "yes"))
                             {
                                 continue;
                             }
@@ -58,7 +58,10 @@ namespace Core
                                 toAdd.LastName = whoIsThis[LAST_NAME_INDEX].FirstCharToUpper();
                             }
 
-                            toAdd.LastWin = DateTime.Today.AddDays(-14);
+                            if (toAdd.FirstName.ToLower() == "ceecee") /// Dirty Fix
+                                toAdd.FirstName = "CeeCee";
+
+                            toAdd.LastWin = DateTime.Today.AddDays(-100);
 
                             if(answersIndex != null)
                             {

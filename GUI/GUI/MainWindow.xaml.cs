@@ -43,9 +43,16 @@ namespace GUI
 
             #region configure players and records
             mPlayers = SerializationHandler.LoadPlayers(PlayersFile, forfeitIndex, indexes);
-            mRecords.ValidatePlayers(ref mPlayers);
+            mRecords.ValidatePlayers(ref mPlayers, Properties.Settings.Default.LotteryEngine != "Causality");
             #endregion
-            
+
+            #region Configure Lottery Engine
+            if (Properties.Settings.Default.LotteryEngine == "Causality")
+                Lottery.CurrentEngine = Lottery.LotteryEngine.Causality;
+            else
+                Lottery.CurrentEngine = Lottery.LotteryEngine.Default;
+            #endregion
+
             //MarketImage();
         }
 
@@ -70,14 +77,14 @@ namespace GUI
             if(state == RaffleStateInterface.States.FireworksDone)
             {
                 Player winner = Lottery.GetWinner(mRecords, mPlayers);
-            SerializationHandler.SaveRecords(mRecords, LotteryRecordFile);
+                SerializationHandler.SaveRecords(mRecords, LotteryRecordFile);
 
-            mRaffleStateHandler.DisplayWinner(winner);
+                mRaffleStateHandler.DisplayWinner(winner);
 
-            lock (mMutex)
-            {
-                mIsRunningEffect = false;
-            }
+                lock (mMutex)
+                {
+                    mIsRunningEffect = false;
+                }
             }
         }
 

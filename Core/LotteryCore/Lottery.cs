@@ -61,7 +61,46 @@ namespace Core
 
         private static Player CausalityEngine(Records records, List<Player> players)
         {
-            throw new NotImplementedException("Causality Lottery Engine is currently not supported");
+            Player retVal = null;
+
+            //Create pool of tickets
+            List<int> tickets = new List<int>();
+            int currentIndex = 0;
+            foreach(Player player in players)
+            {
+                if(player.LastWin <= DateTime.Today.AddDays(-28))
+                {
+                    for (int i = 0; i < 10; ++i)
+                        tickets.Add(currentIndex);
+                }
+                else if (player.LastWin <= DateTime.Today.AddDays(-22))
+                {
+                    for (int i = 0; i < 7; ++i)
+                        tickets.Add(currentIndex);
+                }
+                else if (player.LastWin <= DateTime.Today.AddDays(-15))
+                {
+                    for(int i = 0; i < 4; ++i)
+                        tickets.Add(currentIndex);
+                }
+                else 
+                {
+                    tickets.Add(currentIndex);
+                }
+                
+                currentIndex++;
+            }
+
+            //Generate a value based on the size of the pool
+            int ticket = GenerateValue(0, tickets.Count - 1);
+
+            //Extract the Winner.
+            int winnerIndex = tickets[ticket];
+            retVal = players[winnerIndex];
+            records.ApplyWinner(retVal);
+            players.RemoveAt(winnerIndex);
+            
+            return retVal;
         }
     }
 }

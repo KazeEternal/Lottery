@@ -85,5 +85,14 @@ namespace GUI.Properties {
                 return ((int)(this["ForfeitIndex"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Causality")]
+        public string LotteryEngine {
+            get {
+                return ((string)(this["LotteryEngine"]));
+            }
+        }
     }
 }

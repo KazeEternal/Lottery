@@ -23,5 +23,8 @@
     <Setting Name="ForfeitIndex" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">2</Value>
     </Setting>
+    <Setting Name="LotteryEngine" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Causality</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

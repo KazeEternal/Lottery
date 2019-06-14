@@ -57,15 +57,18 @@ namespace Core
             }
         }
 
-        public void ValidatePlayers(ref List<Player> players)
+        public void ValidatePlayers(ref List<Player> players, bool doOneWeekCoolDown = true)
         {
             foreach(Player player in players)
             {
                 ValidatePlayer(player);
             }
 
-            DateTime targetDateRange = DateTime.Today.AddDays(-8);
-            players = players.Where(o => o.LastWin < targetDateRange).ToList();
+            if (doOneWeekCoolDown)
+            {
+                DateTime targetDateRange = DateTime.Today.AddDays(-8);
+                players = players.Where(o => o.LastWin < targetDateRange).ToList();
+            }
         }
     }
 }

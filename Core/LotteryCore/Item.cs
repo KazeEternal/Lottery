@@ -4,9 +4,11 @@ namespace Core
 {
     public class Item
     {
-        [XmlElement(ElementName = "Name")]
+        //[XmlElement(ElementName = "Name")]
+        [XmlIgnore]
         public string Name { get; set; } = "N/A";
-        [XmlElement(ElementName = "Code")]
+        //[XmlElement(ElementName = "Code")]
+        [XmlIgnore]
         public string Code { get; set; } = "N/A";
         [XmlElement(ElementName = "Date")]
         public string Date { get; set; } = "N/A";
