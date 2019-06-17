@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GUI"
         xmlns:properties="clr-namespace:GUI.Properties"
         mc:Ignorable="d"
-        Icon="./Logo.jpg"
+        
         KeyDown="Window_KeyDown"
         Title="Ubisoft Video Game Raffle" Height="450" Width="800">
     <Grid>

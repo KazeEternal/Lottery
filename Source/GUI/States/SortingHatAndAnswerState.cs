@@ -31,12 +31,12 @@ namespace GUI.States
             mDisplayArea = new SortingHatAndAnswerView();
             displayArea.Children.Add(mDisplayArea);
 
-            FileInfo fInfoSpinningBox = new FileInfo("Audio/SpinningBox.wav");
+            FileInfo fInfoSpinningBox = new FileInfo("Resources/SpinningBox.wav");
             mMPlayerSpinningBox.Open(new System.Uri("file:///" + fInfoSpinningBox.FullName));
             mMPlayerSpinningBox.MediaEnded += MMPlayerSpinningBox_MediaEnded;
             mMPlayerSpinningBox.MediaFailed += MMPlayerSpinningBox_MediaFailed;
 
-            FileInfo fInfoSelectedSound = new FileInfo("Audio/SelectedSound.wav");
+            FileInfo fInfoSelectedSound = new FileInfo("Resources/SelectedSound.wav");
             mMPlayerSelectedSound.Open(new System.Uri("file:///" + fInfoSelectedSound.FullName));
 
             string[] loaders = Properties.Settings.Default.PreSelectAudioList.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);

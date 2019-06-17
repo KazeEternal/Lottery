@@ -25,13 +25,13 @@ namespace GUI.States
 
             Image image = new Image();
 
-            var uriSource = new Uri(@"maxresdefault.jpg", UriKind.Relative);
+            var uriSource = new Uri(@"Resources/maxresdefault.jpg", UriKind.Relative);
             image.Source = new BitmapImage(uriSource);
             
             
             displayArea.Children.Add(image);
 
-            FileInfo fInfoAudio = new FileInfo("MarioKartBox.m4a");
+            FileInfo fInfoAudio = new FileInfo("Resources/MarioKartBox.m4a");
             mMediaPlayer.Open(new System.Uri("file:///" + fInfoAudio.FullName));
         }
 
