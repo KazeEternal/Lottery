@@ -12,3 +12,13 @@ GLVersionGUI/GLVersionGUI/bin/
 GLVersionGUI/GLVersionGUI/obj/
 MonoGame/MonoGame/bin/
 MonoGame/MonoGame/obj/
+build/
+.vs/
+*.csproj
+*.cache
+*.sln
+Source/MonoGame/MonoGame/bin/
+Source/MonoGame/MonoGame/obj/
+SharpMake/source/console/obj/
+SharpMake/source/core/obj/
+SharpMake/source/gui/obj/
