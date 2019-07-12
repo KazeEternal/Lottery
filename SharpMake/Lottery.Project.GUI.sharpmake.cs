@@ -10,7 +10,7 @@ namespace Lottery
 		public WPFProject()
 		{
 			Name = "WPF_GUI";
-            RootNamespace = "WPF_GUI";
+            RootNamespace = "GUI";
             AssemblyName = "LotteryGUI";
 			
             ProjectTypeGuids = CSharpProjectType.Wpf;

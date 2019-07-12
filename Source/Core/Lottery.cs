@@ -70,17 +70,17 @@ namespace Core
             {
                 if(player.LastWin <= DateTime.Today.AddDays(-28))
                 {
-                    for (int i = 0; i < 10; ++i)
+                    for (int i = 0; i < 20; ++i)
                         tickets.Add(currentIndex);
                 }
                 else if (player.LastWin <= DateTime.Today.AddDays(-22))
                 {
-                    for (int i = 0; i < 7; ++i)
+                    for (int i = 0; i < 10; ++i)
                         tickets.Add(currentIndex);
                 }
                 else if (player.LastWin <= DateTime.Today.AddDays(-15))
                 {
-                    for(int i = 0; i < 4; ++i)
+                    for(int i = 0; i < 5; ++i)
                         tickets.Add(currentIndex);
                 }
                 else 

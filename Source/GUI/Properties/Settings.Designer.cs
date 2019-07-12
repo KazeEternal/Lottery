@@ -25,7 +25,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Raffle Bot 5000")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Raffle Bot RTX 3080")]
         public string Title {
             get {
                 return ((string)(this["Title"]));
@@ -92,6 +92,15 @@ namespace GUI.Properties {
         public string LotteryEngine {
             get {
                 return ((string)(this["LotteryEngine"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Who does Number 2 Work For")]
+        public string Question {
+            get {
+                return ((string)(this["Question"]));
             }
         }
     }

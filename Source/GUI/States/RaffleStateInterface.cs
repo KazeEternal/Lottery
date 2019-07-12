@@ -23,7 +23,7 @@ namespace GUI.States
         public abstract void Fireworks(List<Player> mPlayers);
         public abstract void DisplayWinner(Player winner);
 
-        protected virtual void OnShapeChanged(States state)
+        protected virtual void OnStateChanged(States state)
         {
             
             if (StateChangeEvent != null)

@@ -1,0 +1,463 @@
+<?xml version="1.0"?>
+<Records xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Record>
+    <First>Marc</First>
+    <Middle />
+    <Last>Fortier</Last>
+    <Prize>
+      <Date>6/21/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-21T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Jason</First>
+    <Middle />
+    <Last>Schroeder</Last>
+    <Prize>
+      <Date>6/21/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/31/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-21T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Scott</First>
+    <Middle />
+    <Last>Crisostomo</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/31/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/21/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-21T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Jonathan</First>
+    <Middle />
+    <Last>Marshall</Last>
+    <Prize>
+      <Date>6/21/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-21T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Paul</First>
+    <Middle />
+    <Last>Lee</Last>
+    <Prize>
+      <Date>4/19/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-04-19T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Anthony</First>
+    <Middle />
+    <Last>Dipirro</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-04-26T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Jon</First>
+    <Middle />
+    <Last>Mcbain</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/17/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-14T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Kenneth</First>
+    <Middle />
+    <Last>Strickland</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-04-26T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Kim</First>
+    <Middle />
+    <Last>Weigend</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Andrew</First>
+    <Middle />
+    <Last>Levin</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-04-26T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Michael</First>
+    <Middle />
+    <Last>Mackie</Last>
+    <Prize>
+      <Date>4/26/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-04-26T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Kevin</First>
+    <Middle />
+    <Last>Sultan</Last>
+    <Prize>
+      <Date>5/3/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-24T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Rj</First>
+    <Middle />
+    <Last>Palmer</Last>
+    <Prize>
+      <Date>5/3/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-03T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Emmy</First>
+    <Middle />
+    <Last>Lee</Last>
+    <Prize>
+      <Date>5/3/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Mark</First>
+    <Middle />
+    <Last>Siew</Last>
+    <Prize>
+      <Date>5/3/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-03T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Josh</First>
+    <Middle />
+    <Last>Jones</Last>
+    <Prize>
+      <Date>5/3/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/21/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-21T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Christopher</First>
+    <Middle />
+    <Last>Donnelley</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-10T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Alex</First>
+    <Middle />
+    <Last>Jacobs</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-10T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Sam</First>
+    <Middle />
+    <Last>Cho</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-10T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Matt</First>
+    <Middle />
+    <Last>Christmann</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-10T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>CeeCee</First>
+    <Middle />
+    <Last>Smith</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-24T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Darryl</First>
+    <Middle />
+    <Last>Kay</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-10T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Etienne</First>
+    <Middle />
+    <Last>Michon</Last>
+    <Prize>
+      <Date>5/10/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-24T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>John</First>
+    <Middle />
+    <Last>Hart</Last>
+    <Prize>
+      <Date>5/17/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Daniel</First>
+    <Middle />
+    <Last>Gray</Last>
+    <Prize>
+      <Date>5/17/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-17T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Kaiwen</First>
+    <Middle />
+    <Last>Young</Last>
+    <Prize>
+      <Date>5/17/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-17T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Patrick</First>
+    <Middle />
+    <Last>Fram</Last>
+    <Prize>
+      <Date>5/17/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-17T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Demian</First>
+    <Middle />
+    <Last>Linn</Last>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-24T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Tom</First>
+    <Middle />
+    <Last>Leung</Last>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-24T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Travis</First>
+    <Middle />
+    <Last>Kindred</Last>
+    <Prize>
+      <Date>5/24/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-24T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Nathan</First>
+    <Middle />
+    <Last>Perkins</Last>
+    <Prize>
+      <Date>5/31/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-31T00:00:00-07:00</last-win>
+  </Record>
+  
+  <Record>
+    <First>Julien</First>
+    <Middle />
+    <Last>Rivet</Last>
+    <Prize>
+      <Date>5/31/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-31T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Jon</First>
+    <Middle />
+    <Last>Breitner</Last>
+    <Prize>
+      <Date>5/31/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-31T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Todd</First>
+    <Middle />
+    <Last>Allendorf</Last>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Mark</First>
+    <Middle />
+    <Last>Aviles</Last>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/21/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-21T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Suiryer</First>
+    <Middle />
+    <Last>Dend</Last>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Dai</First>
+    <Middle />
+    <Last>Matsumoto</Last>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <Prize>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Meli</First>
+    <Middle />
+    <Last>Medina</Last>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-14T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Christopher</First>
+    <Middle />
+    <Last>Woo</Last>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-14T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Erik</First>
+    <Middle />
+    <Last>Erwitt</Last>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-14T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Sepid</First>
+    <Middle />
+    <Last>Ebrahimi</Last>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-14T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Scott</First>
+    <Middle />
+    <Last>Gallardo</Last>
+    <Prize>
+      <Date>6/14/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-14T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Jon</First>
+    <Middle />
+    <Last>Breitner</Last>
+    <Prize>
+      <Name>N/A</Name>
+      <Code>N/A</Code>
+      <Date>5/31/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-05-31T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Todd</First>
+    <Middle />
+    <Last>Allendorf</Last>
+    <Prize>
+      <Name>N/A</Name>
+      <Code>N/A</Code>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+  <Record>
+    <First>Mark</First>
+    <Middle />
+    <Last>Aviles</Last>
+    <Prize>
+      <Name>N/A</Name>
+      <Code>N/A</Code>
+      <Date>6/7/2019 12:00:00 AM</Date>
+    </Prize>
+    <last-win>2019-06-07T00:00:00-07:00</last-win>
+  </Record>
+</Records>

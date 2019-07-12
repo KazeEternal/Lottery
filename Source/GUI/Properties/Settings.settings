@@ -1,9 +1,9 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="GUI.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WPF_GUI.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="Title" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">Raffle Bot 5000</Value>
+      <Value Profile="(Default)">Raffle Bot RTX 3080</Value>
     </Setting>
     <Setting Name="DisplayImage" Type="System.String" Scope="Application">
       <Value Profile="(Default)">LibraryNewGames.jpg</Value>
@@ -25,6 +25,9 @@
     </Setting>
     <Setting Name="LotteryEngine" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Causality</Value>
+    </Setting>
+    <Setting Name="Question" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Who does Number 2 Work For</Value>
     </Setting>
   </Settings>
 </SettingsFile>

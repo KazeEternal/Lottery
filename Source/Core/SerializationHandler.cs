@@ -144,9 +144,12 @@ namespace Core
                 fInfo.CopyTo(fInfo.FullName + ".bak", true);
             }
 
+            fInfo.Delete();
+
             using (FileStream writer = fInfo.OpenWrite())
             {
                 serializer.Serialize(writer, records);
+                writer.Flush();
             }
         }
 

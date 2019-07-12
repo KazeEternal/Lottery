@@ -73,6 +73,8 @@ namespace GUI.States
 
                         mDisplayArea.Answer.Text = winner.Answers[0].Value;
 
+                        ShowAnswer();
+
                         mMPlayerSelectedSound.Position = TimeSpan.Zero;
                         mMPlayerSelectedSound.Play();
 
@@ -128,7 +130,7 @@ namespace GUI.States
         {
             
             mIsRunning = false;
-            OnShapeChanged(States.FireworksDone);
+            OnStateChanged(States.FireworksDone);
 
             
             mDisplayArea.Answer.Visibility = Visibility.Hidden;
