@@ -27,11 +27,11 @@
                        FontFamily="{StaticResource eurostile_extended_black}"/>
             <!--FontFamily="{StaticResource Harrp}"/-->
         </Viewbox>
-        <Viewbox Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,145,0,380" Grid.RowSpan="2">
+        <Viewbox Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="0,145,0,380" Grid.RowSpan="2">
             <TextBlock Name="questionArea"
                        Text="{Binding Source={x:Static properties:Settings.Default},
                             Path=Question}"
-                       FontFamily="{StaticResource eurostile_extended_black}"></TextBlock>
+                       FontFamily="{StaticResource eurostile_extended_black}" Height="14"></TextBlock>
         </Viewbox>
         <Viewbox Grid.Row="1" Grid.Column="0" Margin="0,53,0,0">
             <StackPanel x:Name="displayArea">

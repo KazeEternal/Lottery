@@ -97,7 +97,7 @@ namespace GUI.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Who does Number 2 Work For")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Who does Number 2 Work For?")]
         public string Question {
             get {
                 return ((string)(this["Question"]));
