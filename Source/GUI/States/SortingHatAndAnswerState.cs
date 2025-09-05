@@ -113,6 +113,11 @@ namespace GUI.States
                 mDisplayWinnerName.Dispatcher.BeginInvoke(
                     (Action)(() =>
                     {
+                        if(players.Count == 0)
+                        {
+                            mDisplayWinnerName.Text = "NO PLAYERS";
+                            return;
+                        }
                         if (index >= players.Count)
                         {
                             index = 0;

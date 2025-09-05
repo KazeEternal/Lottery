@@ -95,6 +95,12 @@ namespace Core
             int ticket = GenerateValue(0, tickets.Count - 1);
 
             //Extract the Winner.
+            if(tickets.Count == 0)
+            {
+                Core.Player noWinner = new Core.Player() { FirstName = "No", LastName = "Winner" };
+                noWinner.Answers.Add(new Question() { Value = "Hello World" });
+                return noWinner;
+            }
             int winnerIndex = tickets[ticket];
             retVal = players[winnerIndex];
             records.ApplyWinner(retVal);

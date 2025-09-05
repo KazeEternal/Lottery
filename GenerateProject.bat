@@ -1,9 +1,21 @@
 @echo off
+setlocal
 
-echo Run Sharp Make
+REM ---------------------------------------
+REM Paths
+REM ---------------------------------------
+set SHARPMakeExe=D:\Development\Sharpmake\Sharpmake.Application\bin\Debug\net6.0\Sharpmake.Application.exe
+set SOLUTION_FILE=SharpMake/Lottery.Solution.sharpmake.cs
 
-call ..\Sharpmake\Bin\Sharpmake.Application.exe /sources(@"SharpMake/Lottery.Solution.sharpmake.cs") %*
+REM ---------------------------------------
+REM Run Sharpmake
+REM ---------------------------------------
+echo Running Sharpmake...
+"%SHARPMakeExe%"  /sources('%SOLUTION_FILE%')
 
-"raffle bot_vs2017.sln"
-
+REM ---------------------------------------
+REM Done
+REM ---------------------------------------
+echo Sharpmake finished.
 pause
+endlocal

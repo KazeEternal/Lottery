@@ -17,7 +17,7 @@ namespace Lottery
 				Lottery.Common.Targets
 			);
 			
-			SourceRootPath = @"[project.SharpmakeCsPath]\..\Source\Core";
+			SourceRootPath = System.IO.Path.GetFullPath(@"[project.SharpmakeCsPath]\..\Source\Core");
 		}
 		
 		[Configure()]
